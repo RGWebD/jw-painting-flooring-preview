@@ -1,0 +1,183 @@
+{
+  "path": "/workspace/profinish/site/images/work/MANIFEST.json",
+  "business_name_on_site_and_gbp": "JW Painting & Pressure Washing & Epoxy Flooring",
+  "formerly": "ProFinish Paint & Epoxy LLC",
+  "phone_on_website": "(904) 533-7260",
+  "phone_on_google_business_profile": "(904) 233-2110",
+  "review_count_on_website": 82,
+  "review_count_on_gbp": 84,
+  "note": "Site rebuild uses the phone and review count published on profinishpaintandepoxy.com. GBP differs \u2014 do not guess which is current without Reese confirming.",
+  "skipped_gbp_photos": [
+    2,
+    6,
+    7,
+    10,
+    20,
+    21,
+    22,
+    26,
+    27,
+    38,
+    39,
+    40
+  ],
+  "skip_reasons": "Messy prep/ladder shots excluded; 38 is duplicate of 20.",
+  "page_image_slots": {
+    "home_hero": "images/work/hero-home.jpg (from gbp 09)",
+    "home_epoxy_feature": "images/work/flooring-04.jpg",
+    "home_about": "images/work/exterior-28.jpg",
+    "service_epoxy": "images/work/flooring-04.jpg",
+    "service_garage": "images/work/flooring-09.jpg",
+    "service_lvp": "images/work/flooring-16.jpg",
+    "service_tile": "images/work/flooring-25.jpg",
+    "service_hardwood": "images/work/flooring-33.jpg",
+    "gallery": "all non-hero jpgs in images/work/",
+    "before_reference": "images/work/before-05.jpg"
+  },
+  "files": [
+    {
+      "file": "images/work/before-05.jpg",
+      "bytes": 251035
+    },
+    {
+      "file": "images/work/before-after-before.jpg",
+      "bytes": 257197
+    },
+    {
+      "file": "images/work/exterior-01.jpg",
+      "bytes": 262510
+    },
+    {
+      "file": "images/work/exterior-03.jpg",
+      "bytes": 518092
+    },
+    {
+      "file": "images/work/exterior-11.jpg",
+      "bytes": 566207
+    },
+    {
+      "file": "images/work/exterior-14.jpg",
+      "bytes": 256394
+    },
+    {
+      "file": "images/work/exterior-18.jpg",
+      "bytes": 224001
+    },
+    {
+      "file": "images/work/exterior-24.jpg",
+      "bytes": 252893
+    },
+    {
+      "file": "images/work/exterior-28.jpg",
+      "bytes": 315002
+    },
+    {
+      "file": "images/work/exterior-30.jpg",
+      "bytes": 682278
+    },
+    {
+      "file": "images/work/exterior-31.jpg",
+      "bytes": 315742
+    },
+    {
+      "file": "images/work/exterior-35.jpg",
+      "bytes": 561704
+    },
+    {
+      "file": "images/work/flooring-04.jpg",
+      "bytes": 271010
+    },
+    {
+      "file": "images/work/flooring-09.jpg",
+      "bytes": 459715
+    },
+    {
+      "file": "images/work/flooring-16.jpg",
+      "bytes": 293368
+    },
+    {
+      "file": "images/work/flooring-19.jpg",
+      "bytes": 213645
+    },
+    {
+      "file": "images/work/flooring-25.jpg",
+      "bytes": 275230
+    },
+    {
+      "file": "images/work/flooring-33.jpg",
+      "bytes": 306171
+    },
+    {
+      "file": "images/work/flooring-37.jpg",
+      "bytes": 177511
+    },
+    {
+      "file": "images/work/gallery-featured-1.jpg",
+      "bytes": 179876
+    },
+    {
+      "file": "images/work/hero-epoxy.jpg",
+      "bytes": 277842
+    },
+    {
+      "file": "images/work/hero-garage.jpg",
+      "bytes": 302278
+    },
+    {
+      "file": "images/work/hero-home.jpg",
+      "bytes": 484300
+    },
+    {
+      "file": "images/work/hero-lvp.jpg",
+      "bytes": 216088
+    },
+    {
+      "file": "images/work/hero-services.jpg",
+      "bytes": 316750
+    },
+    {
+      "file": "images/work/hero-tile.jpg",
+      "bytes": 284086
+    },
+    {
+      "file": "images/work/progress-12.jpg",
+      "bytes": 239691
+    },
+    {
+      "file": "images/work/work-08.jpg",
+      "bytes": 318187
+    },
+    {
+      "file": "images/work/work-13.jpg",
+      "bytes": 700104
+    },
+    {
+      "file": "images/work/work-15.jpg",
+      "bytes": 319558
+    },
+    {
+      "file": "images/work/work-17.jpg",
+      "bytes": 278219
+    },
+    {
+      "file": "images/work/work-23.jpg",
+      "bytes": 182778
+    },
+    {
+      "file": "images/work/work-29.jpg",
+      "bytes": 272270
+    },
+    {
+      "file": "images/work/work-32.jpg",
+      "bytes": 348283
+    },
+    {
+      "file": "images/work/work-34.jpg",
+      "bytes": 275906
+    },
+    {
+      "file": "images/work/work-36.jpg",
+      "bytes": 289001
+    }
+  ]
+}
