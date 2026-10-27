@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 <body>
 <div class="topbar"><div class="container">
@@ -56,67 +56,37 @@
 <div class="flag-stripe"></div>
 
 
-<section class="section section-alt home-slideshow-section" id="our-work">
+
+<section class="section section-alt home-work-strip" id="our-work">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Project gallery</div>
-      <h2><span class="chrome-text">Recent work</span> <span class="red-italic">across Jacksonville</span></h2>
-      <p>Finished floors and exteriors from real JW jobs. Tap any slide to open the full gallery.</p>
-    </div>
-    <div class="slideshow reveal" data-slideshow data-interval="5000">
-      <div class="slideshow-viewport">
-      <a class="slideshow-slide is-active" href="gallery.html" data-index="0" aria-label="View gallery — Polished epoxy floor install">
-        <img src="images/work/flooring-04.jpg" alt="Polished epoxy floor install" loading="eager" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="1" aria-label="View gallery — Garage floor epoxy finish">
-        <img src="images/work/flooring-09.jpg" alt="Garage floor epoxy finish" loading="lazy" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="2" aria-label="View gallery — Finished flake epoxy flooring">
-        <img src="images/work/flooring-16.jpg" alt="Finished flake epoxy flooring" loading="lazy" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="3" aria-label="View gallery — Epoxy flooring project">
-        <img src="images/work/hero-epoxy.jpg" alt="Epoxy flooring project" loading="lazy" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="4" aria-label="View gallery — Garage epoxy coating">
-        <img src="images/work/hero-garage.jpg" alt="Garage epoxy coating" loading="lazy" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="5" aria-label="View gallery — Exterior coating project">
-        <img src="images/work/exterior-01.jpg" alt="Exterior coating project" loading="lazy" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="6" aria-label="View gallery — Finished exterior paint and coatings">
-        <img src="images/work/exterior-14.jpg" alt="Finished exterior paint and coatings" loading="lazy" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="7" aria-label="View gallery — Home exterior after JW finish">
-        <img src="images/work/exterior-35.jpg" alt="Home exterior after JW finish" loading="lazy" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="8" aria-label="View gallery — Completed flooring project">
-        <img src="images/work/work-08.jpg" alt="Completed flooring project" loading="lazy" width="1600" height="1200">
-      </a>
-      <a class="slideshow-slide" href="gallery.html" data-index="9" aria-label="View gallery — Finished floor installation">
-        <img src="images/work/work-32.jpg" alt="Finished floor installation" loading="lazy" width="1600" height="1200">
-      </a>
+    <div class="work-strip-head">
+      <div>
+        <div class="eyebrow">Project gallery</div>
+        <h2><span class="chrome-text">Recent work</span> <span class="red-italic">from JW jobs</span></h2>
       </div>
-      <button type="button" class="slideshow-nav slideshow-prev" aria-label="Previous project photo">‹</button>
-      <button type="button" class="slideshow-nav slideshow-next" aria-label="Next project photo">›</button>
-      <div class="slideshow-dots" role="tablist" aria-label="Slideshow slides">
-      <button type="button" class="slideshow-dot is-active" data-index="0" aria-label="Go to slide 1"></button>
-      <button type="button" class="slideshow-dot" data-index="1" aria-label="Go to slide 2"></button>
-      <button type="button" class="slideshow-dot" data-index="2" aria-label="Go to slide 3"></button>
-      <button type="button" class="slideshow-dot" data-index="3" aria-label="Go to slide 4"></button>
-      <button type="button" class="slideshow-dot" data-index="4" aria-label="Go to slide 5"></button>
-      <button type="button" class="slideshow-dot" data-index="5" aria-label="Go to slide 6"></button>
-      <button type="button" class="slideshow-dot" data-index="6" aria-label="Go to slide 7"></button>
-      <button type="button" class="slideshow-dot" data-index="7" aria-label="Go to slide 8"></button>
-      <button type="button" class="slideshow-dot" data-index="8" aria-label="Go to slide 9"></button>
-      <button type="button" class="slideshow-dot" data-index="9" aria-label="Go to slide 10"></button>
-      </div>
-      <div class="slideshow-chrome" aria-hidden="true"></div>
-    </div>
-    <p class="reveal" style="margin-top:1.5rem;text-align:center">
       <a class="btn btn-primary" href="gallery.html">See Full Gallery</a>
-    </p>
+    </div>
+    <div class="work-strip" data-work-strip data-interval="3500">
+      <button type="button" class="work-strip-nav work-strip-prev" aria-label="Previous photos">‹</button>
+      <div class="work-strip-viewport">
+        <div class="work-strip-track">
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Polished epoxy floor"><img src="images/work/flooring-04.jpg" alt="Polished epoxy floor" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Garage floor epoxy"><img src="images/work/flooring-09.jpg" alt="Garage floor epoxy" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Flake epoxy flooring"><img src="images/work/flooring-16.jpg" alt="Flake epoxy flooring" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Epoxy flooring project"><img src="images/work/hero-epoxy.jpg" alt="Epoxy flooring project" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Garage epoxy coating"><img src="images/work/hero-garage.jpg" alt="Garage epoxy coating" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Exterior coating"><img src="images/work/exterior-01.jpg" alt="Exterior coating" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Finished exterior"><img src="images/work/exterior-14.jpg" alt="Finished exterior" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Home exterior finish"><img src="images/work/exterior-35.jpg" alt="Home exterior finish" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Completed flooring"><img src="images/work/work-08.jpg" alt="Completed flooring" width="320" height="220" loading="eager" decoding="async"></a>
+      <a class="work-strip-item" href="gallery.html" aria-label="View gallery — Floor installation"><img src="images/work/work-32.jpg" alt="Floor installation" width="320" height="220" loading="eager" decoding="async"></a>
+        </div>
+      </div>
+      <button type="button" class="work-strip-nav work-strip-next" aria-label="Next photos">›</button>
+    </div>
   </div>
 </section>
+
 
 <section class="section"><div class="container">
   <div class="section-head reveal">
@@ -275,6 +245,6 @@
     <span>5.0 on Google · 82 reviews · Jacksonville, FL</span>
   </div>
 </div></footer>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3"></script>
 </body>
 </html>

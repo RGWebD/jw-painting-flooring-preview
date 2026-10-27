@@ -77,6 +77,30 @@ p { margin: 0 0 1em; color: var(--muted); }
 }
 
 /* Flag stripe divider */
+
+/* Scroll reveal — progressive enhancement only.
+   Content is ALWAYS visible by default. Only html.js hides .reveal until .in. */
+.reveal { /* visible by default */ }
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+html.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+html.js .reveal-delay-1 { transition-delay: .08s; }
+html.js .reveal-delay-2 { transition-delay: .16s; }
+html.js .reveal-delay-3 { transition-delay: .24s; }
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 .flag-stripe {
   height: 6px; width: 100%;
   background: repeating-linear-gradient(
@@ -102,14 +126,8 @@ p { margin: 0 0 1em; color: var(--muted); }
 }
 
 /* Reveal on scroll */
-.reveal {
-  opacity: 0; transform: translateY(28px);
-  transition: opacity .7s ease, transform .7s ease;
-}
-.reveal.in { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: .1s; }
-.reveal-delay-2 { transition-delay: .2s; }
-.reveal-delay-3 { transition-delay: .3s; }
+/* If JS never marks .in, unhide after paint so content is not blank forever */
+ }
 
 /* Top bar */
 .topbar {
@@ -576,91 +594,102 @@ p { margin: 0 0 1em; color: var(--muted); }
   .hero-logo-wrap { order: -1; }
 }
 
-/* Home project slideshow */
-.home-slideshow-section .section-head { margin-bottom: 1.75rem; }
-.slideshow {
+/* Home work strip — compact, visible without JS */
+.home-work-strip {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.home-work-strip .work-strip-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.home-work-strip .work-strip-head h2 {
+  margin: .15rem 0 0;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+}
+.home-work-strip .work-strip-head .btn {
+  padding: .7rem 1.15rem;
+  font-size: .95rem;
+}
+.work-strip {
   position: relative;
-  border-radius: 14px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .55rem;
+}
+.work-strip-viewport {
   overflow: hidden;
+  border-radius: 10px;
   border: 1px solid rgba(192,205,230,.22);
   background: #05070f;
-  box-shadow:
-    0 0 0 1px rgba(208,24,42,.18),
-    0 24px 60px rgba(0,0,0,.55),
-    inset 0 1px 0 rgba(255,255,255,.06);
+  box-shadow: 0 10px 28px rgba(0,0,0,.35), 0 0 0 1px rgba(208,24,42,.12);
+  /* Fixed compact height — never a huge blank box */
+  height: 240px;
+  max-height: 240px;
 }
-.slideshow-viewport {
-  position: relative;
-  aspect-ratio: 16 / 10;
-  background: #020617;
+.work-strip-track {
+  display: flex;
+  height: 100%;
+  gap: .55rem;
+  padding: .55rem;
+  will-change: transform;
+  transition: transform .45s ease;
 }
-.slideshow-slide {
-  position: absolute; inset: 0;
-  opacity: 0; visibility: hidden;
-  transition: opacity .55s ease, visibility .55s;
-  cursor: pointer;
+.work-strip-item {
+  flex: 0 0 calc((100% - 1.65rem) / 4);
+  max-width: calc((100% - 1.65rem) / 4);
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  background: #0b1220;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
 }
-.slideshow-slide.is-active {
-  opacity: 1; visibility: visible; z-index: 1;
+.work-strip-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
 }
-.slideshow-slide img {
-  width: 100%; height: 100%;
-  object-fit: cover; display: block;
-  transform: scale(1.02);
-  transition: transform 6s ease;
-}
-.slideshow-slide.is-active img { transform: scale(1); }
-.slideshow-nav {
-  position: absolute; top: 50%; z-index: 3;
-  transform: translateY(-50%);
-  width: 48px; height: 48px;
+.work-strip-item:hover img { transform: scale(1.05); }
+.work-strip-nav {
+  width: 40px; height: 40px;
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,.28);
-  background: rgba(2,6,23,.72);
+  background: rgba(2,6,23,.85);
   color: #fff;
-  font-size: 1.75rem; line-height: 1;
+  font-size: 1.5rem;
+  line-height: 1;
   display: grid; place-items: center;
   cursor: pointer;
-  backdrop-filter: blur(6px);
   transition: .2s ease;
 }
-.slideshow-nav:hover {
+.work-strip-nav:hover {
   background: linear-gradient(180deg, var(--red-hot), var(--red-deep));
   border-color: var(--red);
-  box-shadow: 0 8px 24px rgba(208,24,42,.45);
 }
-.slideshow-prev { left: .85rem; }
-.slideshow-next { right: .85rem; }
-.slideshow-dots {
-  position: absolute; left: 0; right: 0; bottom: .95rem;
-  z-index: 3;
-  display: flex; justify-content: center; gap: .45rem;
-  padding: 0 .75rem;
+@media (max-width: 900px) {
+  .work-strip-item {
+    flex-basis: calc((100% - 1.1rem) / 3);
+    max-width: calc((100% - 1.1rem) / 3);
+  }
+  .work-strip-viewport { height: 210px; max-height: 210px; }
 }
-.slideshow-dot {
-  width: 9px; height: 9px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.55);
-  background: rgba(255,255,255,.18);
-  padding: 0; cursor: pointer;
-  transition: .2s ease;
-}
-.slideshow-dot.is-active {
-  background: var(--red);
-  border-color: #fff;
-  box-shadow: 0 0 0 2px rgba(208,24,42,.35);
-  width: 22px; border-radius: 999px;
-}
-.slideshow-chrome {
-  pointer-events: none;
-  position: absolute; inset: 0; z-index: 2;
-  background:
-    linear-gradient(180deg, rgba(2,6,23,.25) 0%, transparent 22%, transparent 70%, rgba(2,6,23,.55) 100%),
-    linear-gradient(90deg, rgba(208,24,42,.12), transparent 18%, transparent 82%, rgba(192,205,230,.1));
-  border-radius: inherit;
-}
-@media (max-width: 700px) {
-  .slideshow-viewport { aspect-ratio: 4 / 3; }
-  .slideshow-nav { width: 40px; height: 40px; font-size: 1.45rem; }
-  .slideshow-prev { left: .45rem; }
-  .slideshow-next { right: .45rem; }
+@media (max-width: 640px) {
+  .home-work-strip { padding-top: 1.75rem; padding-bottom: 1.75rem; }
+  .work-strip-viewport { height: 180px; max-height: 180px; }
+  .work-strip-item {
+    flex-basis: calc((100% - .55rem) / 2);
+    max-width: calc((100% - .55rem) / 2);
+  }
+  .work-strip-nav { width: 34px; height: 34px; font-size: 1.25rem; }
+  .home-work-strip .work-strip-head .btn { width: 100%; }
 }
